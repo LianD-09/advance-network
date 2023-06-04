@@ -11,7 +11,7 @@
                 "instructions": [
                     {
                         "type": "OUTPUT",
-                        "port": "1"
+                        "port": "2"
                     }
                 ],
                 "deferred": []
@@ -20,7 +20,7 @@
                 "criteria": [
                     {
                         "type": "IN_PORT",
-                        "port": 2
+                        "port": 1
                     },
                     {
                         "type": "ETH_DST",
@@ -44,39 +44,6 @@
                 "instructions": [
                     {
                         "type": "OUTPUT",
-                        "port": "2"
-                    }
-                ],
-                "deferred": []
-            },
-            "selector": {
-                "criteria": [
-                    {
-                        "type": "IN_PORT",
-                        "port": 1
-                    },
-                    {
-                        "type": "ETH_DST",
-                        "mac": "00:00:00:00:00:01"
-                    },
-                    {
-                        "type": "ETH_SRC",
-                        "mac": "00:00:00:00:00:02"
-                    }
-                ]
-            }
-        },
-        {
-            "tableId": "0",
-            "priority": 200,
-            "timeout": 0,
-            "isPermanent": true,
-            "deviceId": "of:0000000000000002",
-            "liveType": "UNKNOWN",
-            "treatment": {
-                "instructions": [
-                    {
-                        "type": "OUTPUT",
                         "port": "1"
                     }
                 ],
@@ -89,12 +56,12 @@
                         "port": 2
                     },
                     {
-                        "type": "ETH_SRC",
-                        "mac": "00:00:00:00:00:02"
-                    },
-                    {
                         "type": "ETH_DST",
                         "mac": "00:00:00:00:00:01"
+                    },
+                    {
+                        "type": "ETH_SRC",
+                        "mac": "00:00:00:00:00:02"
                     }
                 ]
             }
@@ -123,55 +90,22 @@
                     },
                     {
                         "type": "ETH_SRC",
-                        "mac": "00:00:00:00:00:01"
-                    },
-                    {
-                        "type": "ETH_DST",
-                        "mac": "00:00:00:00:00:02"
-                    }
-                ]
-            }
-        },
-        {
-            "groupId": 0,
-            "priority": 200,
-            "timeout": 10,
-            "isPermanent": true,
-            "deviceId": "of:000000000000000a",
-            "tableId": 0,
-            "treatment": {
-                "instructions": [
-                    {
-                        "type": "OUTPUT",
-                        "port": "2"
-                    }
-                ],
-                "deferred": []
-            },
-            "selector": {
-                "criteria": [
-                    {
-                        "type": "IN_PORT",
-                        "port": 1
-                    },
-                    {
-                        "type": "ETH_DST",
                         "mac": "00:00:00:00:00:02"
                     },
                     {
-                        "type": "ETH_SRC",
+                        "type": "ETH_DST",
                         "mac": "00:00:00:00:00:01"
                     }
                 ]
             }
         },
         {
-            "groupId": 0,
+            "tableId": "0",
             "priority": 200,
-            "timeout": 10,
+            "timeout": 0,
             "isPermanent": true,
-            "deviceId": "of:000000000000000a",
-            "tableId": 0,
+            "deviceId": "of:0000000000000002",
+            "liveType": "UNKNOWN",
             "treatment": {
                 "instructions": [
                     {
@@ -188,11 +122,11 @@
                         "port": 2
                     },
                     {
-                        "type": "ETH_DST",
+                        "type": "ETH_SRC",
                         "mac": "00:00:00:00:00:01"
                     },
                     {
-                        "type": "ETH_SRC",
+                        "type": "ETH_DST",
                         "mac": "00:00:00:00:00:02"
                     }
                 ]
