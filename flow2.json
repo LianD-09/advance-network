@@ -1,0 +1,70 @@
+{
+    "flows": [
+        {
+            "tableId": "0",
+            "priority": 200,
+            "timeout": 0,
+            "isPermanent": true,
+            "deviceId": "of:0000000000000002",
+            "liveType": "UNKNOWN",
+            "treatment": {
+                "instructions": [
+                    {
+                        "type": "OUTPUT",
+                        "port": "1"
+                    }
+                ],
+                "deferred": []
+            },
+            "selector": {
+                "criteria": [
+                    {
+                        "type": "IN_PORT",
+                        "port": 2
+                    },
+                    {
+                        "type": "ETH_SRC",
+                        "mac": "0E:2F:C9:C1:69:A4"
+                    },
+                    {
+                        "type": "ETH_DST",
+                        "mac": "96:44:A8:E0:C1:8F"
+                    }
+                ]
+            }
+        },
+        {
+            "tableId": "0",
+            "priority": 200,
+            "timeout": 0,
+            "isPermanent": true,
+            "deviceId": "of:0000000000000002",
+            "liveType": "UNKNOWN",
+            "treatment": {
+                "instructions": [
+                    {
+                        "type": "OUTPUT",
+                        "port": "2"
+                    }
+                ],
+                "deferred": []
+            },
+            "selector": {
+                "criteria": [
+                    {
+                        "type": "IN_PORT",
+                        "port": 1
+                    },
+                    {
+                        "type": "ETH_SRC",
+                        "mac": "96:44:A8:E0:C1:8F"
+                    },
+                    {
+                        "type": "ETH_DST",
+                        "mac": "0E:2F:C9:C1:69:A4"
+                    }
+                ]
+            }
+        }
+    ]
+}
